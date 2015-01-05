@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470CC3401A5AC70A0065417C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 470CC33F1A5AC70A0065417C /* Default-568h@2x.png */; };
+		4771FCA21A5AD5C0007ED6CA /* GCDAsyncUdpSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 199B5741151CBE5100155281 /* GCDAsyncUdpSocket.h */; };
+		4771FCA31A5AD5C0007ED6CA /* ios-ntp.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B2BA3213D9B6CF00C9385A /* ios-ntp.h */; };
+		4771FCA41A5AD5C0007ED6CA /* NSDate+NetworkClock.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B2BA4013D9C06100C9385A /* NSDate+NetworkClock.h */; };
+		4771FCA51A5AD5C0007ED6CA /* NetAssociation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D91E95D913D9AF8C004E4194 /* NetAssociation.h */; };
+		4771FCA61A5AD5C0007ED6CA /* NetworkClock.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D91E95DB13D9AF8C004E4194 /* NetworkClock.h */; };
+		4771FCA71A5AD5D4007ED6CA /* ntp.hosts in CopyFiles */ = {isa = PBXBuildFile; fileRef = D91E95EF13D9B018004E4194 /* ntp.hosts */; };
 		8602E82D1A1D50A4001C265E /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 199B5742151CBE5100155281 /* GCDAsyncUdpSocket.m */; };
 		8602E8321A1D5517001C265E /* ntpAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8602E82F1A1D5517001C265E /* ntpAppDelegate.m */; };
 		86273CCB1A1AACBB00487A18 /* NSDate+NetworkClock.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B2BA4113D9C06100C9385A /* NSDate+NetworkClock.m */; };
@@ -52,6 +59,12 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				4771FCA71A5AD5D4007ED6CA /* ntp.hosts in CopyFiles */,
+				4771FCA21A5AD5C0007ED6CA /* GCDAsyncUdpSocket.h in CopyFiles */,
+				4771FCA31A5AD5C0007ED6CA /* ios-ntp.h in CopyFiles */,
+				4771FCA41A5AD5C0007ED6CA /* NSDate+NetworkClock.h in CopyFiles */,
+				4771FCA51A5AD5C0007ED6CA /* NetAssociation.h in CopyFiles */,
+				4771FCA61A5AD5C0007ED6CA /* NetworkClock.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +73,7 @@
 /* Begin PBXFileReference section */
 		199B5741151CBE5100155281 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		199B5742151CBE5100155281 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		470CC33F1A5AC70A0065417C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8602E82E1A1D5517001C265E /* ntpAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ntpAppDelegate.h; sourceTree = "<group>"; };
 		8602E82F1A1D5517001C265E /* ntpAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ntpAppDelegate.m; sourceTree = "<group>"; };
 		8661906E126C0CD70046A2B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +135,7 @@
 		86C39EFE126A1FA000A9DCD1 = {
 			isa = PBXGroup;
 			children = (
+				470CC33F1A5AC70A0065417C /* Default-568h@2x.png */,
 				86C79ED61A1D657F00FC7CC2 /* ios-ntp-doc */,
 				D91E95D613D9AF8C004E4194 /* network-udp */,
 				D91E95D813D9AF8C004E4194 /* ios-ntp-lib */,
@@ -294,7 +309,7 @@
 		86C39F00126A1FA000A9DCD1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Ramsay Consulting";
 				TargetAttributes = {
 					866F2B541A1D35A0008CCF83 = {
@@ -337,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D91E95F713D9B029004E4194 /* ntp.hosts in Resources */,
+				470CC3401A5AC70A0065417C /* Default-568h@2x.png in Resources */,
 				D91E95FF13D9B063004E4194 /* InfoPlist.strings in Resources */,
 				D91E960013D9B063004E4194 /* MainWindow.xib in Resources */,
 			);
@@ -498,7 +514,6 @@
 		86C39F29126A1FA100A9DCD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -507,6 +522,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$SRCROOT/**";
@@ -516,7 +532,6 @@
 		86C39F2A126A1FA100A9DCD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_VERSION = "";
