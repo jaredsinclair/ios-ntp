@@ -162,8 +162,8 @@ static double ntpDiffSeconds(struct ntpTimestamp * start, struct ntpTimestamp * 
     struct timeval  now;
 	gettimeofday(&now, NULL);
 
-	ntpClientSendTime.fullSeconds = now.tv_sec + JAN_1970;
-	ntpClientSendTime.partSeconds = uSec2Frac(now.tv_usec);
+	ntpClientSendTime.fullSeconds = (uint32_t)(now.tv_sec + JAN_1970);
+	ntpClientSendTime.partSeconds = (uint32_t)uSec2Frac(now.tv_usec);
 
     wireData[10] = htonl(now.tv_sec + JAN_1970);            // Transmit Timestamp
 	wireData[11] = htonl(uSec2Frac(now.tv_usec));
@@ -178,7 +178,7 @@ static double ntpDiffSeconds(struct ntpTimestamp * start, struct ntpTimestamp * 
     struct timeval          arrival_time;
 	gettimeofday(&arrival_time, NULL);
 
-    ntpClientRecvTime.fullSeconds = arrival_time.tv_sec + JAN_1970;     // Transmit Timestamp coarse
+    ntpClientRecvTime.fullSeconds = (uint32_t)(arrival_time.tv_sec + JAN_1970);     // Transmit Timestamp coarse
 	ntpClientRecvTime.partSeconds = uSec2Frac(arrival_time.tv_usec);    // Transmit Timestamp fine
 
     uint32_t                hostData[12];

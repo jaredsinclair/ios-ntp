@@ -175,9 +175,11 @@
     [[NSNotificationCenter defaultCenter] addObserverForName:@"assoc-good" object:nil queue:nil
                                                   usingBlock:^(NSNotification *note)
     {
+#ifdef IOS_NTP_LOGGING
         NetAssociation *    association = [note object];
         NTP_Logging(@"%@ (%lu)", association,
                     (unsigned long)[timeAssociations count]);
+#endif
         [self offsetAverage];
     }];
 
